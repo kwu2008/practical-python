@@ -1,15 +1,19 @@
-class Stock:
 
-    xyz = "xyz"
-    
-    def __init__(self, name, shares, price):
-        self.name = name
-        self.shares = shares
-        self.price = price
+from matplotlib import pyplot as plt
+import numpy as np
+import math
 
-    def cost(self):
-        return self.shares * self.price
+x = np.arange(0, math.pi * 2, 0.05)
+y = np.sin(x)
 
-    def sell(self, nshares):
-        self.shares -= nshares
+fig = plt.figure()
 
+ax = fig.add_axes([0,0,1,1])
+
+ax.plot(x, y)
+
+ax.set_title("Sine Wave")
+ax.set_xlabel("Angle")
+ax.set_ylabel("Sine")
+
+fig.show()
